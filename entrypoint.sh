@@ -10,6 +10,6 @@ Domain ${VPNC_DOMAIN}
 DPD idle timeout (our side) 0
 EOF
 
-exec /usr/sbin/vpnc default --no-detach --non-inter
+exec /usr/sbin/vpnc default --non-inter
 
 bash -c "${1}"
