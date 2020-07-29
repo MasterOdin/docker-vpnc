@@ -1,6 +1,9 @@
 FROM debian:buster-slim
 
-RUN apt-get update -y \
+COPY entrypoint /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh \
+    && apt-get update -y \
     && apt-get install -y vpnc \
     && apt-get autoremove -y \
     && apt-get clean \
